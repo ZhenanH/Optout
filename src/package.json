@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "antd": "latest",
+    "moment": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-google-recaptcha-v3": "1.5.0"
+  },
+  "keywords": [],
+  "name": "antd-reproduction-template",
+  "description": ""
+}
