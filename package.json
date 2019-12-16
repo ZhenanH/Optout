@@ -9,7 +9,8 @@
     "react": "latest",
     "react-app-rewired": "2.1.5",
     "react-dom": "latest",
-    "react-google-recaptcha-v3": "1.5.0"
+    "react-google-recaptcha-v3": "1.5.0",
+    "react-scripts": "3.3.0"
   },
   "keywords": [],
   "name": "antd-reproduction-template",
