@@ -93,7 +93,6 @@ class HorizontalLoginForm extends React.Component {
               Thank you for submitting - please allow 48 hours before it's taken
               into efficient.{" "}
             </div>
-            <Button>Close</Button>
           </div>
         ) : (
           <Form layout="horizontal" onSubmit={this.handleSubmit}>

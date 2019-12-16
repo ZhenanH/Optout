@@ -1,8 +1,13 @@
 {
   "dependencies": {
     "antd": "latest",
+    "babel-plugin-import": "1.13.0",
+    "customize-cra": "0.9.1",
+    "less": "3.10.3",
+    "less-loader": "5.0.0",
     "moment": "latest",
     "react": "latest",
+    "react-app-rewired": "2.1.5",
     "react-dom": "latest",
     "react-google-recaptcha-v3": "1.5.0"
   },
@@ -14,8 +19,8 @@
     "react-scripts": "1.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
