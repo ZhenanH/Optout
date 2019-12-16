@@ -39,7 +39,7 @@ class HorizontalLoginForm extends React.Component {
   checkCheckBox = (rule, value, callback) => {
     console.log(value);
     if (!value) {
-      callback("Please agree the terms and conditions!");
+      callback("Please agree the terms and conditions.");
     } else {
       callback();
     }
@@ -73,7 +73,28 @@ class HorizontalLoginForm extends React.Component {
       <GoogleReCaptchaProvider reCaptchaKey="6LdhTccUAAAAAAmEOq3IpLk2UINqNhYTdzZNrIau">
         <GoogleReCaptcha onVerify={this.onVerify} />
         {this.state.submitted ? (
-          <div> Thanks you </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+              height: 500
+            }}
+          >
+            <div
+              style={{
+                fontSize: 20,
+                textAlign: "center",
+                maxWidth: 500,
+                marginBottom: 48
+              }}
+            >
+              Thank you for submitting - please allow 48 hours before it's taken
+              into efficient.{" "}
+            </div>
+            <Button>Close</Button>
+          </div>
         ) : (
           <Form layout="horizontal" onSubmit={this.handleSubmit}>
             <Row gutter={32}>
@@ -163,8 +184,11 @@ class HorizontalLoginForm extends React.Component {
                   }
                 >
                   {" "}
-                  Placeholder for [legal terms here to comply with any
-                  regulatory requirements]
+                  <span style={{}}>
+                    By checking this box you agreed to provide PebblePost your
+                    data so that we may accommodate your request to
+                    unsubscribe/opt out.
+                  </span>
                 </Checkbox>
               )}
             </Form.Item>
