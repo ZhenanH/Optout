@@ -154,7 +154,7 @@ class HorizontalLoginForm extends React.Component {
                     type="check"
                     style={{ color: "#52c41a", marginRight: 8 }}
                   />
-                  Opt me out of Receiving Mail
+                  Opt Me Out of Receiving Mail
                 </div>
                 <div style={{ marginLeft: 24 }}>
                   Your request is confirmed. Please allow 48-72 hours before
@@ -194,7 +194,7 @@ class HorizontalLoginForm extends React.Component {
                     type="check"
                     style={{ color: "#52c41a", marginRight: 8 }}
                   />
-                  Disclose Information KnownA bout Me
+                  Disclose Information Known About Me
                 </div>
                 {this.state.formData.state !== " California" ? (
                   <div style={{ marginLeft: 24 }}>
