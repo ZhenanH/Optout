@@ -154,7 +154,7 @@ class HorizontalLoginForm extends React.Component {
                     type="check"
                     style={{ color: "#52c41a", marginRight: 8 }}
                   />
-                  Opt Me Out of Receiving Mail
+                  Opt me out of Receiving Mail
                 </div>
                 <div style={{ marginLeft: 24 }}>
                   Your request is confirmed. Please allow 48-72 hours before
@@ -194,7 +194,7 @@ class HorizontalLoginForm extends React.Component {
                     type="check"
                     style={{ color: "#52c41a", marginRight: 8 }}
                   />
-                  Disclose Information Known About Me
+                  Disclose Information KnownA bout Me
                 </div>
                 {this.state.formData.state !== " California" ? (
                   <div style={{ marginLeft: 24 }}>
@@ -342,7 +342,7 @@ class HorizontalLoginForm extends React.Component {
                     </Col>
                   </Row>
                   <Form.Item label="Request Type">
-                    {getFieldDecorator("checkbox-group", {
+                    {getFieldDecorator("request-type-group", {
                       //initialValue: [null, null,null],
                       rules: [
                         {
@@ -363,7 +363,7 @@ class HorizontalLoginForm extends React.Component {
                         >
                           {" "}
                           <span style={{}}>
-                            Opt Me Out of Receiving Mail{" "}
+                            Opt me out of Receiving Mail{" "}
                             <Tooltip title="Consumers can choose to manage the mail you or anyone in your household receives from PebblePost. By entering the required information in this form, you can opt to no longer receive mail from PebblePost on behalf of our brands.">
                               <Icon type="info-circle" />
                             </Tooltip>
@@ -377,7 +377,7 @@ class HorizontalLoginForm extends React.Component {
                         >
                           {" "}
                           <span style={{}}>
-                            Delete Information Known About Me{" "}
+                            Delete my information{" "}
                             <Tooltip title="Under the California Consumer Privacy Act (CCPA), California residents are entitled to know the categories of information collected about them. By entering the required information in this form, PebblePost can disclose the information they have collected about you over the last 12 months.">
                               <Icon type="info-circle" />
                             </Tooltip>
