@@ -363,7 +363,7 @@ class HorizontalLoginForm extends React.Component {
                         >
                           {" "}
                           <span style={{}}>
-                            Opt me out of Receiving Mail{" "}
+                            Opt Me Out of Receiving Mail{" "}
                             <Tooltip title="Consumers can choose to manage the mail you or anyone in your household receives from PebblePost. By entering the required information in this form, you can opt to no longer receive mail from PebblePost on behalf of our brands.">
                               <Icon type="info-circle" />
                             </Tooltip>
@@ -377,7 +377,7 @@ class HorizontalLoginForm extends React.Component {
                         >
                           {" "}
                           <span style={{}}>
-                            Delete my information{" "}
+                            Delete Information Known About Me{" "}
                             <Tooltip title="Under the California Consumer Privacy Act (CCPA), California residents are entitled to know the categories of information collected about them. By entering the required information in this form, PebblePost can disclose the information they have collected about you over the last 12 months.">
                               <Icon type="info-circle" />
                             </Tooltip>
