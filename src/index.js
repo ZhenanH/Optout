@@ -146,7 +146,7 @@ class HorizontalLoginForm extends React.Component {
             >
               You have successfully submitted the request to following:
             </div>
-            {this.state.formData["checkbox-group"].indexOf("OptOutMail") >=
+            {this.state.formData["request-type-group"].indexOf("OptOutMail") >=
               0 && (
               <div style={{ marginBottom: 24 }}>
                 <div style={{ color: "grey" }}>
@@ -154,7 +154,7 @@ class HorizontalLoginForm extends React.Component {
                     type="check"
                     style={{ color: "#52c41a", marginRight: 8 }}
                   />
-                  Opt me out of Receiving Mail
+                  Opt Me Out of Receiving Mail
                 </div>
                 <div style={{ marginLeft: 24 }}>
                   Your request is confirmed. Please allow 48-72 hours before
@@ -162,7 +162,7 @@ class HorizontalLoginForm extends React.Component {
                 </div>
               </div>
             )}
-            {this.state.formData["checkbox-group"].indexOf("DeleteInfo") >=
+            {this.state.formData["request-type-group"].indexOf("DeleteInfo") >=
               0 && (
               <div style={{ marginBottom: 24 }}>
                 <div style={{ color: "grey" }}>
@@ -187,14 +187,15 @@ class HorizontalLoginForm extends React.Component {
                 )}
               </div>
             )}
-            {this.state.formData["checkbox-group"].indexOf("NotifyMe") >= 0 && (
+            {this.state.formData["request-type-group"].indexOf("NotifyMe") >=
+              0 && (
               <div style={{ marginBottom: 24 }}>
                 <div style={{ color: "grey" }}>
                   <Icon
                     type="check"
                     style={{ color: "#52c41a", marginRight: 8 }}
                   />
-                  Disclose Information KnownA bout Me
+                  Disclose Information Known About Me
                 </div>
                 {this.state.formData.state !== " California" ? (
                   <div style={{ marginLeft: 24 }}>
@@ -244,7 +245,7 @@ class HorizontalLoginForm extends React.Component {
                   <Row gutter={32}>
                     <Col span={12}>
                       <Form.Item label="First Name">
-                        {getFieldDecorator("fistname", {
+                        {getFieldDecorator("firstname", {
                           rules: [
                             {
                               required: true,
@@ -363,7 +364,7 @@ class HorizontalLoginForm extends React.Component {
                         >
                           {" "}
                           <span style={{}}>
-                            Opt me out of Receiving Mail{" "}
+                            Opt Me Out of Receiving Mail{" "}
                             <Tooltip title="Consumers can choose to manage the mail you or anyone in your household receives from PebblePost. By entering the required information in this form, you can opt to no longer receive mail from PebblePost on behalf of our brands.">
                               <Icon type="info-circle" />
                             </Tooltip>
@@ -377,7 +378,7 @@ class HorizontalLoginForm extends React.Component {
                         >
                           {" "}
                           <span style={{}}>
-                            Delete my information{" "}
+                            Delete Information Known About Me{" "}
                             <Tooltip title="Under the California Consumer Privacy Act (CCPA), California residents are entitled to know the categories of information collected about them. By entering the required information in this form, PebblePost can disclose the information they have collected about you over the last 12 months.">
                               <Icon type="info-circle" />
                             </Tooltip>
