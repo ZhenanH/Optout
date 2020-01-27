@@ -25,6 +25,8 @@ const { Option } = Select;
 const states = "Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin, Wyoming".split(
   ","
 );
+const endpoint = "https://optout.pbbl.co/prod";
+//const endpoint ="https://m7pwfi5u15.execute-api.us-east-1.amazonaws.com/develop";
 // function hasErrors(fieldsError) {
 //   return Object.keys(fieldsError).some(field => fieldsError[field]);
 // }
@@ -68,7 +70,7 @@ class HorizontalLoginForm extends React.Component {
 
         this.setState({ loading: true });
         fetch(
-          "https://m7pwfi5u15.execute-api.us-east-1.amazonaws.com/develop",
+          endpoint,
           this.postRequest({ token: this.state.token, ...values })
         )
           .then(data => {
@@ -123,7 +125,7 @@ class HorizontalLoginForm extends React.Component {
     } = this.props.form;
 
     return (
-      <GoogleReCaptchaProvider reCaptchaKey="6LdhTccUAAAAAAmEOq3IpLk2UINqNhYTdzZNrIau">
+      <GoogleReCaptchaProvider reCaptchaKey="6Lfie8cUAAAAAA35pMQJ0OqJ8H4OR0SQS1jfLkBQ">
         <GoogleReCaptcha onVerify={this.onVerify} />
         {this.state.submitted ? (
           <div
