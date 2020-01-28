@@ -146,7 +146,7 @@ class HorizontalLoginForm extends React.Component {
                 marginBottom: 48
               }}
             >
-              You have successfully submitted the request to following:
+              You have successfully submitted the following:
             </div>
             {this.state.formData["request-type-group"].indexOf("OptOutMail") >=
               0 && (
@@ -221,7 +221,7 @@ class HorizontalLoginForm extends React.Component {
           <div>
             <Alert
               style={{ marginBottom: 24 }}
-              message="Why We Need These Information"
+              message="Why We Need This Information"
               description={
                 <div>
                   <div>
@@ -235,7 +235,7 @@ class HorizontalLoginForm extends React.Component {
                     <div>
                       <br />
                       This form is only applicable to consumers within the
-                      United State, because PebblePost only operates in the
+                      United States, because PebblePost only operates in the
                       United States.
                     </div>
                   </div>
@@ -313,6 +313,21 @@ class HorizontalLoginForm extends React.Component {
                           ]
                         })(
                           <Select
+                            onFocus={() => {
+                              if (!this.state.autocompleteDisabled) {
+                                let i;
+                                const el = document.getElementsByClassName(
+                                  "ant-select-search__field"
+                                );
+                                for (i = 0; i < el.length; i++) {
+                                  el[i].setAttribute(
+                                    "autocomplete",
+                                    "registration-select"
+                                  );
+                                }
+                                this.setState({ autocompleteDisabled: true });
+                              }
+                            }}
                             showSearch
                             //style={{ width: 200 }}
                             placeholder="Select a state"
@@ -384,7 +399,7 @@ class HorizontalLoginForm extends React.Component {
                           {" "}
                           <span style={{}}>
                             Delete Information Known About Me{" "}
-                            <Tooltip title="Under the California Consumer Privacy Act (CCPA), California residents are entitled to know the categories of information collected about them. By entering the required information in this form, PebblePost can disclose the information they have collected about you over the last 12 months.">
+                            <Tooltip title="The California Consumer Privacy Act (CCPA) grants consumers the right to request deletion of their personal information. By entering the required information in this form, PebblePost can properly comply and delete any personal information they have collected about you.">
                               <Icon type="info-circle" />
                             </Tooltip>
                           </span>
@@ -398,11 +413,7 @@ class HorizontalLoginForm extends React.Component {
                           {" "}
                           <span style={{}}>
                             Disclose Information Known About Me{" "}
-                            <Tooltip
-                              title="The California Consumer Privacy Act (CCPA) grants consumers the right to request deletion of their personal information. By entering the required information in this form, PebblePost can properly comply and delete any personal information they have collected about you.
-
-."
-                            >
+                            <Tooltip title="Under the California Consumer Privacy Act (CCPA), California residents are entitled to know the categories of information collected about them. By entering the required information in this form, PebblePost can disclose the information they have collected about you over the last 12 months.">
                               <Icon type="info-circle" />
                             </Tooltip>
                           </span>
