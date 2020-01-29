@@ -182,8 +182,7 @@ class HorizontalLoginForm extends React.Component {
                 ) : (
                   <div style={{ marginLeft: 24 }}>
                     If your request has been validated, we will delete your
-                    Personal Information within 45(this number is subject to
-                    change based on volume of requests) days, and provide
+                    Personal Information within 45 days, and provide
                     confirmation via email when completed. In the event your
                     request is not validated, you will be notified via email.
                   </div>
@@ -208,8 +207,7 @@ class HorizontalLoginForm extends React.Component {
                 ) : (
                   <div style={{ marginLeft: 24 }}>
                     If your request has been validated, we will delete your
-                    Personal Information within 45(this number is subject to
-                    change based on volume of requests) days, and provide
+                    Personal Information within 45 days, and provide
                     confirmation via email when completed. In the event your
                     request is not validated, you will be notified via email.
                   </div>
